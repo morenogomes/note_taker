@@ -17,7 +17,7 @@ router.post("/notes", function (req, res) {
 });
 //
 // app.post("/notes", function (req, res) {
-router.delete("/notes:id", function (req, res) {
+router.delete("/notes/:id", function (req, res) {
     storage
         .removeNotes(req.params.id)
         .then(() => res.json({ ok: true }))
